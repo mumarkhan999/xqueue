@@ -21,7 +21,10 @@ DATABASES = {
         'NAME': 'xqueue',
         'HOST': os.environ.get('DB_HOST', 'edx.devstack.mysql57'),
         # Wrap all view methods in an atomic transaction automatically.
-        'ATOMIC_REQUESTS': True
+        'ATOMIC_REQUESTS': True,
+        'USER': os.environ.get('DB_USER', ''),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'PORT': os.environ.get('DB_PORT', ''),
     }
 }
 
